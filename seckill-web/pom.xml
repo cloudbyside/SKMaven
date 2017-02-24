@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>SKMaven</artifactId>
+        <groupId>com.ylz.seckill</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>seckill-web</artifactId>
+    <packaging>war</packaging>
+    <dependencies>
+        <!--web层对service的依赖-->
+        <dependency>
+            <groupId>com.ylz.seckill</groupId>
+            <artifactId>seckill-service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!--依赖seckill-enum模块-->
+        <dependency>
+            <groupId>com.ylz.seckill</groupId>
+            <artifactId>seckill-enum</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ylz.seckill</groupId>
+            <artifactId>seckill-dto</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <!--Web基本依赖-->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>taglibs</groupId>
+            <artifactId>standard</artifactId>
+            <version>1.1.2</version>
+        </dependency>
+
+
+        <!--SpringMVC相关依赖-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>4.3.3.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>4.3.3.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.8.1</version>
+        </dependency>
+        <!--Web层的其他相关依赖-->
+        <!--例如：文件上传-->
+
+    </dependencies>
+    <build>
+        <finalName>seckill-web</finalName>
+    </build>
+
+</project>

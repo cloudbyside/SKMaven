@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - seckilldb@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="seckilldb">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="dbcourse"/>
+    <schema id="3" name="information_schema"/>
+    <schema id="4" name="jxufe"/>
+    <schema id="5" name="mysql"/>
+    <schema id="6" name="newseckill"/>
+    <schema id="7" name="performance_schema"/>
+    <schema id="8" name="test"/>
+    <schema id="9" name="yooai"/>
+    <table id="10" parent="1" name="seckill"/>
+    <table id="11" parent="1" name="success_killed"/>
+    <column id="12" parent="10" name="seckill_id">
+      <comment>商品库存Id</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="13" parent="10" name="name">
+      <comment>商品名称</comment>
+      <mandatory>1</mandatory>
+      <data-type>varchar(120)|0</data-type>
+    </column>
+    <column id="14" parent="10" name="number">
+      <comment>库存数量</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="15" parent="10" name="start_time">
+      <data-type>timestamp|0</data-type>
+      <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+    </column>
+    <column id="16" parent="10" name="end_time">
+      <data-type>timestamp|0</data-type>
+      <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+    </column>
+    <column id="17" parent="10" name="create_time">
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="18" parent="10" name="PRIMARY">
+      <columns>seckill_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="19" parent="11" name="seckill_id">
+      <comment>秒杀产品Id</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="20" parent="11" name="user_phone">
+      <comment>用户手机号码</comment>
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="21" parent="11" name="status">
+      <comment>状态:-1:无效、0:成功、1:已付款</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="22" parent="11" name="create_time">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="23" parent="11" name="PRIMARY">
+      <columns>seckill_id
+user_phone</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="24" parent="11" name="success_killed_ibfk_1">
+      <columns>seckill_id</columns>
+      <ref-key>~.seckill.PRIMARY</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+  </database-model>
+</dataSource>

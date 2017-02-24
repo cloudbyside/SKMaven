@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SKMaven.iml" filepath="$PROJECT_DIR$/SKMaven.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seckill-dao/seckill-dao.iml" filepath="$PROJECT_DIR$/seckill-dao/seckill-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seckill-dto/seckill-dto.iml" filepath="$PROJECT_DIR$/seckill-dto/seckill-dto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seckill-entity/seckill-entity.iml" filepath="$PROJECT_DIR$/seckill-entity/seckill-entity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seckill-enum/seckill-enum.iml" filepath="$PROJECT_DIR$/seckill-enum/seckill-enum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seckill-exception/seckill-exception.iml" filepath="$PROJECT_DIR$/seckill-exception/seckill-exception.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seckill-redis/seckill-redis.iml" filepath="$PROJECT_DIR$/seckill-redis/seckill-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seckill-service/seckill-service.iml" filepath="$PROJECT_DIR$/seckill-service/seckill-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seckill-test/seckill-test.iml" filepath="$PROJECT_DIR$/seckill-test/seckill-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seckill-web/seckill-web.iml" filepath="$PROJECT_DIR$/seckill-web/seckill-web.iml" />
+    </modules>
+  </component>
+</project>
