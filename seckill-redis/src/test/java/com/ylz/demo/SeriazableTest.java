@@ -20,6 +20,7 @@ public class SeriazableTest {
         System.out.println("序列化字节时间："+(end-begin));
         System.out.println("序列化字节长度："+appleBytes.length);
         System.out.println("序列化字节结果："+resultApple);
+        System.out.println(apple.getName());
     }
 
     /**

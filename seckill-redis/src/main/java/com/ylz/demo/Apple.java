@@ -1,9 +1,11 @@
 package com.ylz.demo;
 
+import java.io.Serializable;
+
 /**
  * Created by liuburu on 2017/2/27.
  */
-public class Apple {
+public class Apple implements Serializable{
     private int id;
     private String name;
 

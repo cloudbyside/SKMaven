@@ -25,6 +25,10 @@
           <element id="archive" name="seckill-redis-1.0-SNAPSHOT.jar">
             <element id="module-output" name="seckill-redis" />
           </element>
+          <element id="library" level="project" name="Maven: com.dyuproject.protostuff:protostuff-core:1.0.8" />
+          <element id="library" level="project" name="Maven: com.dyuproject.protostuff:protostuff-api:1.0.8" />
+          <element id="library" level="project" name="Maven: com.dyuproject.protostuff:protostuff-runtime:1.0.8" />
+          <element id="library" level="project" name="Maven: com.dyuproject.protostuff:protostuff-collectionschema:1.0.8" />
           <element id="archive" name="seckill-enum-1.0-SNAPSHOT.jar">
             <element id="module-output" name="seckill-enum" />
           </element>
