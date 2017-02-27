@@ -1,12 +1,15 @@
 package com.ylz.base;
 
+import com.ylz.enums.SeckillEnums;
+
 /**
  * Created by liuburu on 2017/2/18.
  */
 public class SeckillResultData<T> {
     private boolean success;
     private T data;
-    private String errMsg;
+    private int stateNum;
+    private String stateMsg;
 
     /**
      * 成功报文构造器
@@ -21,11 +24,12 @@ public class SeckillResultData<T> {
     /**
      * 失败报文构造器
      * @param success
-     * @param errMsg
+     * @param errMsg  枚举对象
      */
-    public SeckillResultData(boolean success, String errMsg) {
+    public SeckillResultData(boolean success, SeckillEnums errMsg) {
         this.success = success;
-        this.errMsg = errMsg;
+        this.stateNum = errMsg.getStateNum();
+        this.stateMsg = errMsg.getStateInfo();
     }
 
     public boolean isSuccess() {
@@ -44,11 +48,19 @@ public class SeckillResultData<T> {
         this.data = data;
     }
 
-    public String getErrMsg() {
-        return errMsg;
+    public int getStateNum() {
+        return stateNum;
     }
 
-    public void setErrMsg(String errMsg) {
-        this.errMsg = errMsg;
+    public void setStateNum(int stateNum) {
+        this.stateNum = stateNum;
+    }
+
+    public String getStateMsg() {
+        return stateMsg;
+    }
+
+    public void setStateMsg(String stateMsg) {
+        this.stateMsg = stateMsg;
     }
 }

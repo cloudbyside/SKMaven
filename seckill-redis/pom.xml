@@ -11,5 +11,9 @@
 
     <artifactId>seckill-redis</artifactId>
 
+    <dependencies>
+
+    </dependencies>
+
 
 </project>

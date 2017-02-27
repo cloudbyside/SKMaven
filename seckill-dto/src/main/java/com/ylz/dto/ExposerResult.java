@@ -68,6 +68,14 @@ public class ExposerResult {
         this.seckillId = seckillId;
     }
 
+    public String getMd5() {
+        return md5;
+    }
+
+    public void setMd5(String md5) {
+        this.md5 = md5;
+    }
+
     public Seckill getSeckill() {
         return seckill;
     }
@@ -84,11 +92,27 @@ public class ExposerResult {
         this.seckillEnum = seckillEnum;
     }
 
-    public String getMd5() {
-        return md5;
+    public Date getBeginTime() {
+        return beginTime;
     }
 
-    public void setMd5(String md5) {
-        this.md5 = md5;
+    public void setBeginTime(Date beginTime) {
+        this.beginTime = beginTime;
+    }
+
+    public Date getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(Date endTime) {
+        this.endTime = endTime;
+    }
+
+    public Date getNowTime() {
+        return nowTime;
+    }
+
+    public void setNowTime(Date nowTime) {
+        this.nowTime = nowTime;
     }
 }

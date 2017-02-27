@@ -1,6 +1,7 @@
 package com.ylz.service.iml;
 
 import com.alibaba.fastjson.JSON;
+import com.ylz.base.SeckillResultData;
 import com.ylz.dto.ExecuteSeckillResult;
 import com.ylz.dto.ExposerResult;
 import com.ylz.entity.Seckill;
@@ -33,9 +34,9 @@ public class SeckillServiceImlTest {
     @Test
     public void excuteSeckill()  {
         try {
-            ExposerResult exposerResult = seckillService.acquireSeckillURL(4);
+            ExposerResult exposerResult = seckillService.acquireSeckillURL(19);
             String md5 = exposerResult.getMd5();
-            ExecuteSeckillResult executeSeckillResult = seckillService.excuteSeckill(4, 15270998540L, md5);
+            ExecuteSeckillResult executeSeckillResult = seckillService.excuteSeckill(19, 15270998540L, md5);
             System.out.println(JSON.toJSONString(executeSeckillResult));
         } catch (NoSuchSeckillException e) {
             e.printStackTrace();
@@ -44,7 +45,8 @@ public class SeckillServiceImlTest {
         } catch (SeckillNoStartException e) {
             e.printStackTrace();
         } catch (RepeatSeckillException e) {
-            e.printStackTrace();
+           // e.printStackTrace();
+            System.out.println("重复秒杀啊；快捷键；拉萨附近");
         }
     }
     @Test
@@ -65,6 +67,22 @@ public class SeckillServiceImlTest {
     public void acquireSeckillURL() {
         ExposerResult exposerResult = seckillService.acquireSeckillURL(2);
         System.out.println(JSON.toJSONString(exposerResult));
+    }
+
+    @Test
+    public void testJunit(){
+        ExecuteSeckillResult executeSeckillResult = seckillService.excuteSeckill(19, 15270998540L, "605ce498c0f1c865df1425d8f05d2667");
+        SeckillResultData<ExecuteSeckillResult> seckillResultData = new SeckillResultData<ExecuteSeckillResult>(true, executeSeckillResult);
+        System.out.println(seckillResultData);
+    }
+
+    public void fun(){
+        int a=1;
+        String b = "dfsa";
+        System.out.println(a);
+        System.out.println(b);
+        String c = b.concat("_end");
+        System.out.println(c);
     }
 
 
