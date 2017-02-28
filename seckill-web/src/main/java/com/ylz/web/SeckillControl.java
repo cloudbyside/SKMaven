@@ -54,7 +54,7 @@ public class SeckillControl {
         logger.info("Begin==>单条记录查询ID:{}", id);
         Seckill seckill = seckillService.selectOneSeckill(id);
         SeckillResultData<Seckill> resultData = new SeckillResultData<Seckill>(true, seckill);
-        logger.info("End==>单条记录查询resultData:{}", resultData);
+        logger.info("End==>单条记录查询ResultData:{}", resultData);
         return resultData;
     }
 

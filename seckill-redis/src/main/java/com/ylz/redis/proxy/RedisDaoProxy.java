@@ -2,8 +2,6 @@ package com.ylz.redis.proxy;
 
 import com.ylz.entity.Seckill;
 import com.ylz.redis.RedisDao;
-import org.springframework.beans.factory.annotation.Autowired;
-import redis.clients.jedis.Jedis;
 
 /**
  * 代理类专门负责:关闭jedis操作对象
