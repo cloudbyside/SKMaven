@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--redisDao扫描器-->
+    <context:component-scan base-package="com.ylz.redis"></context:component-scan>
+
+    <!--properties配置文件加载-->
+    <context:property-placeholder location="classpath:jedis-conf.properties"></context:property-placeholder>
+
+    <!--redis相关配置参数bean-->
+    <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+        <property name="maxTotal" value="${jedis.maxTotal}"></property>
+        <property name="maxIdle" value="${jedis.maxIdle}"></property>
+        <property name="minIdle" value="${jedis.minIdle}"></property>
+        <property name="lifo" value="${jedis.lifo}"></property>
+        <property name="fairness" value="${jedis.fairness}"></property>
+        <property name="maxWaitMillis" value="${jedis.maxWaitMillis}"></property>
+        <property name="minEvictableIdleTimeMillis" value="${jedis.minEvictableIdleTimeMillis}"></property>
+        <property name="softMinEvictableIdleTimeMillis" value="${jedis.softMinEvictableIdleTimeMillis}"></property>
+        <property name="numTestsPerEvictionRun" value="${jedis.numTestsPerEvictionRun}"></property>
+        <property name="evictionPolicyClassName" value="${jedis.evictionPolicyClassName}"></property>
+        <property name="testOnCreate" value="${jedis.testOnCreate}"></property>
+        <property name="testOnBorrow" value="${jedis.testOnBorrow}"></property>
+        <property name="testOnReturn" value="${jedis.testOnReturn}"></property>
+        <property name="testWhileIdle" value="${jedis.testWhileIdle}"></property>
+        <property name="timeBetweenEvictionRunsMillis" value="${jedis.timeBetweenEvictionRunsMillis}"></property>
+        <property name="blockWhenExhausted" value="${jedis.blockWhenExhausted}"></property>
+        <property name="jmxEnabled" value="${jedis.jmxEnabled}"></property>
+        <property name="jmxNamePrefix" value="${jedis.jmxNamePrefix}"></property>
+        <property name="jmxNameBase" value="${jedis.jmxNameBase}"></property>
+    </bean>
+
+    <!--jedisPool连接池-->
+
+    <bean name="jedisPool" class="redis.clients.jedis.JedisPool">
+        <constructor-arg index="0" ref="jedisPoolConfig"></constructor-arg>
+        <constructor-arg index="1" value="${jedis.ip}"></constructor-arg>
+        <constructor-arg index="2" value="${jedis.port}"></constructor-arg>
+    </bean>
+
+    <!--实例工厂获取单个jedis对象-->
+   <!-- <bean name="jedis" factory-bean="jedisPool" factory-method="getResource" scope="prototype">
+    </bean>-->
+
+
+
+
+
+
+</beans>

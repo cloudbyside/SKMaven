@@ -1,4 +1,4 @@
-package com.ylz.demo;
+package com.ylz.util;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -8,7 +8,7 @@ import java.io.ObjectOutputStream;
 /**
  * Created by liuburu on 2017/2/27.
  */
-public class AppleDefaultSerializeUtil {
+public class DefaultSerializeUtil {
     /**
      * 序列化对象
      *

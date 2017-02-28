@@ -34,7 +34,7 @@ public class TestSeckillDao {
     @Test
     public void testQuerySeckill() throws SQLException {
         System.out.println(dataSource.getConnection());
-        System.out.println(JSON.toJSONString(seckillMapper.selectByPrimaryKey(555)));
+        System.out.println(JSON.toJSONString(seckillMapper.selectByPrimaryKey(2)));
     }
 
     @Test

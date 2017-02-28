@@ -1,4 +1,4 @@
-package com.ylz.demo;
+package com.ylz.util;
 
 import org.junit.Test;
 
@@ -14,8 +14,8 @@ public class SeriazableTest {
     public void testDefalutSerializable() {
         long begin = System.currentTimeMillis();
         Apple apple = new Apple(1006, "天地一号");
-        byte[] appleBytes = AppleDefaultSerializeUtil.serialize(apple);
-        Object resultApple = AppleDefaultSerializeUtil.unserialize(appleBytes);
+        byte[] appleBytes = DefaultSerializeUtil.serialize(apple);
+        Object resultApple = DefaultSerializeUtil.unserialize(appleBytes);
         long end = System.currentTimeMillis();
         System.out.println("序列化字节时间："+(end-begin));
         System.out.println("序列化字节长度："+appleBytes.length);
@@ -31,8 +31,8 @@ public class SeriazableTest {
     public void testGooleSerializable() {
         long begin = System.currentTimeMillis();
         Apple apple = new Apple(1006, "天地一号");
-        byte[] appleBytes = AppleGoogleSerializeUtil.serialize(apple);
-        Object resultApple = AppleGoogleSerializeUtil.unserialize(appleBytes);
+        byte[] appleBytes = GoogleSerializeUtil.serialize(apple,Apple.class);
+        Object resultApple = GoogleSerializeUtil.unserialize(appleBytes,Apple.class);
         long end = System.currentTimeMillis();
         System.out.println("序列化字节时间："+(end-begin));
         System.out.println("序列化字节长度："+appleBytes.length);

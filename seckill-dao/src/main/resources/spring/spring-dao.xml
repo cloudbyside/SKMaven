@@ -6,14 +6,14 @@
     <!--1.加载数据库配置文件-->
     <context:property-placeholder location="classpath:db.properties"></context:property-placeholder>
     <!--2.配置数据源-->
-    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+    <bean name="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
         <property name="username" value="${jdbc.user}"></property>
         <property name="password" value="${jdbc.password}"></property>
         <property name="url" value="${jdbc.url}"></property>
         <property name="driverClassName" value="${jdbc.driverClass}"></property>
     </bean>
     <!--3.配置SqlSessionFactory对象-->
-    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+    <bean name="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"></property><!--依赖数据源-->
         <property name="configLocation" value="classpath:mybatis-config.xml"></property>
         <property name="typeAliasesPackage" value="com.ylz.entity"></property><!--实体Bean别名配置-->

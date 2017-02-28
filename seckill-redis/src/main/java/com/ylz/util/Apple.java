@@ -1,4 +1,4 @@
-package com.ylz.demo;
+package com.ylz.util;
 
 import java.io.Serializable;
 
