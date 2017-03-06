@@ -4,6 +4,7 @@ import com.ylz.entity.Seckill;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+import java.util.Map;
 
 public interface SeckillMapper {
 
@@ -16,10 +17,13 @@ public interface SeckillMapper {
     //分页查询
     List<Seckill> selectByPage(
             @Param("begin") int begin,
-            @Param("offset") int offset);
+            @Param("offset") int offset,
+            @Param("sort") int sort,
+            @Param("order") String order
+    );
 
     //查询秒杀产品的总记录条数
-    int selectTotalCount();
+    int selectTotalCount(@Param("sort")int sort);
 
     int updateByPrimaryKeySelective(Seckill record);
 

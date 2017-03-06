@@ -11,7 +11,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.sql.DataSource;
 import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by liuburu on 2017/2/18.
@@ -39,7 +41,7 @@ public class TestSeckillDao {
 
     @Test
     public void testSeclectByPage() throws SQLException {
-        List<Seckill> seckills = seckillMapper.selectByPage(0,8);
+        List<Seckill> seckills = seckillMapper.selectByPage(0,8,1,"desc");
         System.out.println(JSON.toJSONString(seckills));
     }
 
@@ -57,5 +59,19 @@ public class TestSeckillDao {
         int rowCount = successKilledMapper.insertSelective(record);
         System.out.println("影响结果==>"+rowCount);
     }
+
+    @Test
+    public void test(){
+        Map map = new HashMap();
+        map.put("sort",0);
+        System.out.println(seckillMapper.selectTotalCount(2));
+    }
+
+    @Test
+    public void test1(){
+        System.out.println(seckillMapper.updateSeckillNumber(2));
+    }
+
+
 
 }

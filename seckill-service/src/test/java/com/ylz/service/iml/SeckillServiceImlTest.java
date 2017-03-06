@@ -7,7 +7,6 @@ import com.ylz.dto.ExposerResult;
 import com.ylz.entity.Seckill;
 import com.ylz.exception.NoSuchSeckillException;
 import com.ylz.exception.RepeatSeckillException;
-import com.ylz.exception.SeckillNoStartException;
 import com.ylz.exception.StoreEmptyException;
 import com.ylz.service.SeckillService;
 import org.junit.Test;
@@ -42,8 +41,6 @@ public class SeckillServiceImlTest {
             e.printStackTrace();
         } catch (StoreEmptyException e) {
             e.printStackTrace();
-        } catch (SeckillNoStartException e) {
-            e.printStackTrace();
         } catch (RepeatSeckillException e) {
            // e.printStackTrace();
             System.out.println("重复秒杀啊；快捷键；拉萨附近");
@@ -57,7 +54,7 @@ public class SeckillServiceImlTest {
 
     @Test
     public void selectSeckillByPage() throws Exception {
-        List<Seckill> seckills = seckillService.selectSeckillByPage(2,5);
+        List<Seckill> seckills = seckillService.selectSeckillByPage(1,5,1,"desc");
         for (Seckill sk:seckills){
             System.out.println(JSON.toJSONString(sk));
         }
@@ -76,13 +73,9 @@ public class SeckillServiceImlTest {
         System.out.println(seckillResultData);
     }
 
+    @Test
     public void fun(){
-        int a=1;
-        String b = "dfsa";
-        System.out.println(a);
-        System.out.println(b);
-        String c = b.concat("_end");
-        System.out.println(c);
+        System.out.println(seckillService.selectAllCount());
     }
 
 

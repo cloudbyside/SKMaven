@@ -1,7 +1,6 @@
 com\ylz\exception\URLRewriteException.class
-com\ylz\exception\StoreEmptyException.class
-com\ylz\base\SeckillException.class
 com\ylz\exception\NoSuchSeckillException.class
 com\ylz\exception\RepeatSeckillException.class
-com\ylz\exception\SeckillNoStartException.class
+com\ylz\exception\StoreEmptyException.class
+com\ylz\base\SeckillException.class
 com\ylz\exception\SeckillEndException.class

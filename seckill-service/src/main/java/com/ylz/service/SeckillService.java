@@ -6,9 +6,10 @@ import com.ylz.entity.Seckill;
 import com.ylz.exception.NoSuchSeckillException;
 import com.ylz.exception.RepeatSeckillException;
 import com.ylz.exception.StoreEmptyException;
-import com.ylz.exception.SeckillNoStartException;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * 秒杀相关的主要业务逻辑
@@ -20,7 +21,13 @@ public interface SeckillService {
      * 查询秒杀产品总记录条数
      * @return
      */
-    int selectTotalCount();
+    Map<String,Integer> selectAllCount();
+
+    /**
+     * 查询秒杀产品总记录条数
+     * @return
+     */
+    int selectTotalCount(@Param("sort") int sort);
 
     /**
      * 查询单个秒杀产品
@@ -36,7 +43,7 @@ public interface SeckillService {
      * @param pageSize
      * @return
      */
-    List<Seckill> selectSeckillByPage(int pageNo,int pageSize);
+    List<Seckill> selectSeckillByPage(int pageNo,int pageSize,int sort,String order);
 
 
     /**
@@ -45,7 +52,7 @@ public interface SeckillService {
      * @return
      */
     ExposerResult acquireSeckillURL(int seckillId)
-    throws NoSuchSeckillException,StoreEmptyException,SeckillNoStartException;
+    throws NoSuchSeckillException,StoreEmptyException;
 
 
     /**

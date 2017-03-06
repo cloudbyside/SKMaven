@@ -7,16 +7,17 @@ import com.ylz.dto.ExposerResult;
 import com.ylz.entity.Seckill;
 import com.ylz.entity.SuccessKilled;
 import com.ylz.entity.SuccessKilledKey;
+import com.ylz.enums.QueryTypeEnum;
 import com.ylz.enums.SeckillEnums;
 import com.ylz.exception.*;
 import com.ylz.service.SeckillService;
 import com.ylz.service.util.MD5Utils;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by liuburu on 2017/2/18.
@@ -30,8 +31,17 @@ public class SeckillServiceIml implements SeckillService {
     @Autowired
     SuccessKilledMapper successKilledMapper;
 
-    public int selectTotalCount() {
-        return seckillMapper.selectTotalCount();
+    @Override
+    public Map<String,Integer> selectAllCount() {
+        Map<String,Integer> totals = new HashMap<String,Integer>();
+        totals.put(QueryTypeEnum.TYPE_0.getQueryType(),selectTotalCount(0));
+        totals.put(QueryTypeEnum.TYPE_1.getQueryType(),selectTotalCount(1));
+        totals.put(QueryTypeEnum.TYPE_2.getQueryType(),selectTotalCount(2));
+        return totals;
+    }
+
+    public int selectTotalCount(int sort) {
+        return seckillMapper.selectTotalCount(sort);
     }
 
     public Seckill selectOneSeckill(int seckillId) {
@@ -39,13 +49,13 @@ public class SeckillServiceIml implements SeckillService {
         return seckill;
     }
 
-    public List<Seckill> selectSeckillByPage(int pageNo, int pageSize) {
+    public List<Seckill> selectSeckillByPage(int pageNo, int pageSize,int sort,String order) {
         int begin = (pageNo - 1) * pageSize;
-        return seckillMapper.selectByPage(begin, pageSize);
+        return seckillMapper.selectByPage(begin, pageSize,sort,order);
     }
 
     public ExposerResult acquireSeckillURL(int seckillId)
-            throws NoSuchSeckillException, StoreEmptyException, SeckillNoStartException {
+            throws NoSuchSeckillException, StoreEmptyException{
         Seckill seckill = seckillMapper.selectByPrimaryKey(seckillId);
         if (seckill == null) {//没有该商品
             throw new NoSuchSeckillException(SeckillEnums.SECKILL_NO_SUCH.getStateInfo());
@@ -53,9 +63,7 @@ public class SeckillServiceIml implements SeckillService {
         Date now = new Date();
         if (now.after(seckill.getEndTime())) {//该产品秒杀时间已经结束!
             throw new SeckillEndException(SeckillEnums.SECKILL_AREADY_CLOSE.getStateInfo());
-        } else if (now.before(seckill.getStartTime())) {//该商品秒杀活动还未开始!
-            throw new SeckillNoStartException(SeckillEnums.SECKILL_NO_START.getStateInfo());
-        } else {
+        }  else {
             Seckill seckill1 = seckillMapper.selectByPrimaryKey(seckillId);
             String md5URL = MD5Utils.toMD5Code(seckillId);
             ExposerResult result = new ExposerResult(true, seckillId, md5URL, seckill1);

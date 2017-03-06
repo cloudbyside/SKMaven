@@ -24,6 +24,28 @@
         select
         <include refid="Base_Column_List"/>
         from seckill
+        <if test="sort==0 and order=='desc'">/*1.1默认按照创建时间排序(默认)*/
+            ORDER BY create_time DESC
+        </if>
+        <if test="sort==0 and order=='asc'">/*1.2默认按照创建时间排序*/
+            ORDER BY create_time ASC
+        </if>
+        <if test="sort==1 and order=='desc'">/*2.1按照即将开始时间(实用)*/
+            WHERE TIMEDIFF(CURRENT_TIMESTAMP,start_time)<![CDATA[<=]]>0
+            ORDER BY TIMEDIFF(CURRENT_TIMESTAMP,start_time) DESC
+        </if>
+        <if test="sort==1 and order=='asc'">/*2.2按照即将开始时间*/
+            WHERE TIMEDIFF(CURRENT_TIMESTAMP,start_time)<![CDATA[<=]]>0
+            ORDER BY TIMEDIFF(CURRENT_TIMESTAMP,start_time) ASC
+        </if>
+        <if test="sort==2 and order=='desc'">/*3.1按照即将结束时间(实用)*/
+            where TIMEDIFF(CURRENT_TIMESTAMP,end_time)<![CDATA[ <=]]>0
+            ORDER BY TIMEDIFF(CURRENT_TIMESTAMP,end_time) DESC
+        </if>
+        <if test="sort==2 and order=='asc'">/*3.2按照即将结束时间*/
+            where TIMEDIFF(CURRENT_TIMESTAMP,end_time)<![CDATA[<=]]>0
+            ORDER BY TIMEDIFF(CURRENT_TIMESTAMP,end_time) ASC
+        </if>
         LIMIT #{begin},#{offset}
     </select>
 
@@ -31,6 +53,16 @@
     <select id="selectTotalCount" resultType="Integer">
         SELECT COUNT(1)
         FROM seckill
+        <if test="sort==0">
+        </if>
+        <if test="sort==1">
+            WHERE TIMEDIFF(CURRENT_TIMESTAMP,start_time)<![CDATA[<=]]>0
+        </if>
+        <if test="sort==2">
+            WHERE TIMEDIFF(CURRENT_TIMESTAMP,end_time)<![CDATA[<=]]>0
+        </if>
+
+
     </select>
 
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">

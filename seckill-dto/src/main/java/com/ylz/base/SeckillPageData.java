@@ -48,4 +48,14 @@ public class SeckillPageData<T> {
     public void setPageData(T pageData) {
         this.pageData = pageData;
     }
+
+    @Override
+    public String toString() {
+        return "SeckillPageData{" +
+                "curNo=" + curNo +
+                ", pageSize=" + pageSize +
+                ", totalNum=" + totalNum +
+                ", pageData=" + pageData +
+                '}';
+    }
 }
