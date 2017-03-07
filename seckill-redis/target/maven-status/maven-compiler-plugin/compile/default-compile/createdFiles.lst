@@ -2,5 +2,4 @@ com\ylz\redis\RedisDao.class
 com\ylz\util\Apple.class
 com\ylz\util\DefaultSerializeUtil.class
 com\ylz\util\GoogleSerializeUtil.class
-com\ylz\redis\proxy\RedisDaoProxy.class
 com\ylz\redis\iml\RedisSeckillDaoIml.class

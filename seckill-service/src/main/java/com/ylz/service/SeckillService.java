@@ -1,13 +1,18 @@
 package com.ylz.service;
 
+import com.ylz.base.SeckillException;
 import com.ylz.dto.ExecuteSeckillResult;
 import com.ylz.dto.ExposerResult;
+import com.ylz.dto.UserSucessKillsDTO;
 import com.ylz.entity.Seckill;
+import com.ylz.entity.SuccessKilled;
 import com.ylz.exception.NoSuchSeckillException;
 import com.ylz.exception.RepeatSeckillException;
 import com.ylz.exception.StoreEmptyException;
+import com.ylz.exception.URLRewriteException;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -62,8 +67,29 @@ public interface SeckillService {
      * @param md5
      * @return
      */
-    ExecuteSeckillResult excuteSeckill(int seckillId,long userPhone,String md5)
+    ExecuteSeckillResult excuteSeckill(int seckillId, long userPhone, String md5)
             throws RepeatSeckillException,StoreEmptyException;
+
+
+     List<UserSucessKillsDTO> queryUserSeckResult(Long userPhone,int pageNo,int pageSize);
+
+     int queryUserSeckResultCount(Long usrePhone);
+
+
+    /**
+     * 使用存储过程进行秒杀动作
+     * @param seckillId
+     * @param userPhone
+     * @param md5
+     * @return
+     * @throws RepeatSeckillException
+     * @throws StoreEmptyException
+     * @throws SeckillException
+     * @throws URLRewriteException
+     * @throws Exception
+     */
+    ExecuteSeckillResult excuteSeckillByPro(int seckillId,Long userPhone,String md5) throws
+    RepeatSeckillException,StoreEmptyException,SeckillException,URLRewriteException,Exception;
 
 
 

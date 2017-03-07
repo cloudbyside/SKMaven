@@ -23,6 +23,7 @@
       <module name="seckill-entity" target="1.8" />
       <module name="seckill-enum" target="1.8" />
       <module name="seckill-exception" target="1.8" />
+      <module name="seckill-parent" target="1.8" />
       <module name="seckill-redis" target="1.8" />
       <module name="seckill-service" target="1.8" />
       <module name="seckill-test" target="1.8" />

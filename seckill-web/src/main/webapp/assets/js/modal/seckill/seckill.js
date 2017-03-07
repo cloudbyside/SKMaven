@@ -5,25 +5,29 @@ var seckill = {
     /*分页插件初始化*/
     pagination: {
         init: function (totalNum, perPageNum, pageNo,sortType) {
-            console.log("开始初始化分页插件！");
+           // console.log("开始初始化分页插件！");
             seckillConfig.sortType = sortType;
 
             paginationInit(totalNum, perPageNum, pageNo);//调用分页初始化函数
-            console.log("初始化分页插件完毕！");
+           // console.log("初始化分页插件完毕！");
         }
     },
     /*排序按钮事件监听*/
     initSortBtn:function () {
-        console.log("分类查询按钮事件注册开始");
+       // console.log("分类查询按钮事件注册开始");
         var willBeginBtn = $("#willBeginBtn");
         var willEndBtn = $("#willEndBtn");
-        registerSortBtn(willBeginBtn,willEndBtn);
-        console.log("分类查询按钮事件注册结束");
+        var defaultBtn = $("#defaultBtn");
+        var userBtn = $("#userBtn");
+        var loginOutBtn = $("#loginOutBtn");
+        var hotIngBtn = $("#hotIngBtn");
+        registerSortBtn(willBeginBtn,willEndBtn,defaultBtn,userBtn,loginOutBtn,hotIngBtn);
+      //  console.log("分类查询按钮事件注册结束");
     },
     
     /*判断用户是否登录*/
     userLoginCheck: function () {
-        if ($.cookie("userPhone") == undefined) {
+        if ($.cookie("userPhone") == undefined||$.cookie("userPhone")=="null") {
             //弹出模态框进行登陆
             $("#killPhoneModal").modal({
                 show: true,  //显示弹出层

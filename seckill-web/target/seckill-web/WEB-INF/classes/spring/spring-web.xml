@@ -18,4 +18,11 @@
     <mvc:default-servlet-handler></mvc:default-servlet-handler>
 
     <!--其他配置:拦截器，文件上传等-->
+   <!-- <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/seckill/**"></mvc:mapping>
+            <mvc:exclude-mapping path="/"></mvc:exclude-mapping>
+            <bean class="com.ylz.interceptor.NoSuchURLInterceptor"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors>-->
 </beans>

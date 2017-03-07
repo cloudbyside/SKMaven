@@ -46,6 +46,17 @@
             where TIMEDIFF(CURRENT_TIMESTAMP,end_time)<![CDATA[<=]]>0
             ORDER BY TIMEDIFF(CURRENT_TIMESTAMP,end_time) ASC
         </if>
+         <if test="sort==3 and order=='asc'">/*4.1活动正在进行排序*/
+             WHERE TIMEDIFF(CURRENT_TIMESTAMP,start_time)<![CDATA[>=]]>0
+             AND TIMEDIFF(CURRENT_TIMESTAMP,end_time)<![CDATA[<=]]>0
+             ORDER BY TIMEDIFF(CURRENT_TIMESTAMP,start_time) ASC
+        </if>
+        <if test="sort==3 and order=='desc'">/*4.1活动正在进行排序*/
+            WHERE TIMEDIFF(CURRENT_TIMESTAMP,start_time)<![CDATA[>=]]>0
+            AND TIMEDIFF(CURRENT_TIMESTAMP,end_time)<![CDATA[<=]]>0
+            ORDER BY TIMEDIFF(CURRENT_TIMESTAMP,start_time) DESC
+        </if>
+
         LIMIT #{begin},#{offset}
     </select>
 
@@ -60,6 +71,10 @@
         </if>
         <if test="sort==2">
             WHERE TIMEDIFF(CURRENT_TIMESTAMP,end_time)<![CDATA[<=]]>0
+        </if>
+        <if test="sort==3">
+            WHERE TIMEDIFF(CURRENT_TIMESTAMP,start_time)<![CDATA[>=]]>0
+            AND TIMEDIFF(CURRENT_TIMESTAMP,end_time)<![CDATA[<=]]>0
         </if>
 
 
@@ -143,5 +158,7 @@
         where seckill_id = #{seckillId,jdbcType=INTEGER}
         and number >0
     </update>
+
+    <!---->
 
 </mapper>

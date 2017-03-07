@@ -7,7 +7,8 @@ public enum  QueryTypeEnum {
 
     TYPE_0("createTime"),
     TYPE_1("willBegin"),
-    TYPE_2("willEnd")
+    TYPE_2("willEnd"),
+    TYPE_3("seckIng")
     ;
     private String queryType;
 

@@ -1,6 +1,7 @@
 package com.ylz.dao;
 
 import com.alibaba.fastjson.JSON;
+import com.ylz.dto.UserSucessKillsDTO;
 import com.ylz.entity.Seckill;
 import com.ylz.entity.SuccessKilled;
 import org.junit.Test;
@@ -11,6 +12,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.sql.DataSource;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -41,7 +43,7 @@ public class TestSeckillDao {
 
     @Test
     public void testSeclectByPage() throws SQLException {
-        List<Seckill> seckills = seckillMapper.selectByPage(0,8,1,"desc");
+        List<Seckill> seckills = seckillMapper.selectByPage(0,5,3,"desc");
         System.out.println(JSON.toJSONString(seckills));
     }
 
@@ -73,5 +75,32 @@ public class TestSeckillDao {
     }
 
 
+    @Autowired
+    private ProcedureMapper procedureMapper;
+
+    @Test
+    public void testPro(){
+        Map<String, Object> map = new HashMap<String,Object>();
+        map.put("userPhone",15270998540l);
+        map.put("seckillId",2);
+        map.put("createTime",new Date());
+        map.put("result",0);
+        procedureMapper.excuteSeckillPro(map);
+        System.out.println(map.get("result"));
+    }
+
+
+    @Test
+    public void testQuery1(){
+        List<UserSucessKillsDTO> successKilleds = successKilledMapper.queryUserResultsByPage(15270998540l,0,5);
+        System.out.println(JSON.toJSONString(successKilleds));
+
+    }
+
+    @Test
+    public void testQuery2(){
+
+
+    }
 
 }

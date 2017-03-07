@@ -7,11 +7,11 @@ import com.ylz.redis.RedisDao;
  * 代理类专门负责:关闭jedis操作对象
  * Created by liuburu on 2017/2/28.
  */
-public class RedisDaoProxy{
+public class RedisSeckillProxy{
 
     private RedisDao redisDao;
 
-    public RedisDaoProxy(RedisDao redisDao) {
+    public RedisSeckillProxy(RedisDao redisDao) {
         this.redisDao = redisDao;
 }
 

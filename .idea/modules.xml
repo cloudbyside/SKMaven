@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/seckill-entity/seckill-entity.iml" filepath="$PROJECT_DIR$/seckill-entity/seckill-entity.iml" />
       <module fileurl="file://$PROJECT_DIR$/seckill-enum/seckill-enum.iml" filepath="$PROJECT_DIR$/seckill-enum/seckill-enum.iml" />
       <module fileurl="file://$PROJECT_DIR$/seckill-exception/seckill-exception.iml" filepath="$PROJECT_DIR$/seckill-exception/seckill-exception.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seckill-parent/seckill-parent.iml" filepath="$PROJECT_DIR$/seckill-parent/seckill-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/seckill-redis/seckill-redis.iml" filepath="$PROJECT_DIR$/seckill-redis/seckill-redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/seckill-service/seckill-service.iml" filepath="$PROJECT_DIR$/seckill-service/seckill-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/seckill-test/seckill-test.iml" filepath="$PROJECT_DIR$/seckill-test/seckill-test.iml" />

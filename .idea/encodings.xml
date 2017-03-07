@@ -7,6 +7,7 @@
     <file url="file://$PROJECT_DIR$/seckill-entity" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/seckill-enum" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/seckill-exception" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/seckill-parent" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/seckill-redis" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/seckill-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/seckill-test" charset="UTF-8" />

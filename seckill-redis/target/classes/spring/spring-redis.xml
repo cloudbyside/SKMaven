@@ -4,11 +4,15 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <!--properties配置文件加载-->
+<!--
+    <context:property-placeholder location="classpath:jedis-conf.properties"></context:property-placeholder>
+-->
+
     <!--redisDao扫描器-->
     <context:component-scan base-package="com.ylz.redis"></context:component-scan>
 
-    <!--properties配置文件加载-->
-    <context:property-placeholder location="classpath:jedis-conf.properties"></context:property-placeholder>
+
 
     <!--redis相关配置参数bean-->
     <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">

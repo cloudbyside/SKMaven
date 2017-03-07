@@ -11,7 +11,8 @@ public enum SeckillEnums {
     SECKILL_NO_START(1004,"秒杀未开启"),
     SECKILL_AREADY_CLOSE(1005,"秒杀已经时间已经过了"),
     SECKILL_URL_REWRITE(1006,"秒杀地址被篡改！"),
-    SECKILL_USER_NO_LOGIN(1007,"用户未登陆")
+    SECKILL_USER_NO_LOGIN(1007,"用户未登陆"),
+    SECKILL_DATABASE_ERROR(1008,"数据库系统错误")
     ;
 
 

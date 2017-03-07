@@ -6,12 +6,11 @@ import com.ylz.base.SeckillPageData;
 import com.ylz.base.SeckillResultData;
 import com.ylz.dto.ExecuteSeckillResult;
 import com.ylz.dto.ExposerResult;
+import com.ylz.dto.UserSucessKillsDTO;
 import com.ylz.entity.Seckill;
+import com.ylz.entity.SuccessKilled;
 import com.ylz.enums.SeckillEnums;
-import com.ylz.exception.NoSuchSeckillException;
-import com.ylz.exception.RepeatSeckillException;
-import com.ylz.exception.SeckillEndException;
-import com.ylz.exception.StoreEmptyException;
+import com.ylz.exception.*;
 import com.ylz.service.SeckillService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -36,6 +35,8 @@ public class SeckillControl {
 
     @Autowired
     private SeckillService seckillService; //spring容器注入逻辑层
+
+
 
 
     /**
@@ -142,14 +143,20 @@ public class SeckillControl {
             seckillResultData = new SeckillResultData<ExecuteSeckillResult>(false, SeckillEnums.SECKILL_USER_NO_LOGIN);
         }
         try {
-            ExecuteSeckillResult executeSeckillResult = seckillService.excuteSeckill(id, userPhone, md5);
+            //ExecuteSeckillResult executeSeckillResult = seckillService.excuteSeckill(id, userPhone, md5);
+            /*改成调用存储过程*/
+            ExecuteSeckillResult executeSeckillResult = seckillService.excuteSeckillByPro(id, userPhone, md5);
             seckillResultData = new SeckillResultData<ExecuteSeckillResult>(true, executeSeckillResult);
         } catch (RepeatSeckillException e) {//重复秒杀异常
             seckillResultData = new SeckillResultData<ExecuteSeckillResult>(false, SeckillEnums.SECKILL_REPEAT);
         } catch (StoreEmptyException e) {//库存为空异常
             seckillResultData = new SeckillResultData<ExecuteSeckillResult>(false, SeckillEnums.SECKILL_STORE_EMPTY);
+        } catch (URLRewriteException e) {//地址篡改异常
+            seckillResultData = new SeckillResultData<ExecuteSeckillResult>(false, SeckillEnums.SECKILL_URL_REWRITE);
         } catch (SeckillException e) {//系统异常
             seckillResultData = new SeckillResultData<ExecuteSeckillResult>(false, SeckillEnums.SECKILL_INNER_ERROR);
+        } catch (Exception e){
+            seckillResultData = new SeckillResultData<ExecuteSeckillResult>(false, SeckillEnums.SECKILL_DATABASE_ERROR);
         }
         return seckillResultData;
     }
@@ -167,5 +174,19 @@ public class SeckillControl {
         SeckillResultData<Map<String, Integer>> resultData = new SeckillResultData<Map<String, Integer>>(true, seckillService.selectAllCount());
         return resultData;
     }
+
+
+    @RequestMapping(value = "/user/results", method = RequestMethod.GET)
+    @ResponseBody
+    public SeckillPageData<List<UserSucessKillsDTO>> getAllUserSeckills(
+            @RequestParam(value = "userPhone",defaultValue = "defalut-phone")Long userPhone,
+            @RequestParam(value = "pageNo",defaultValue = "1")Integer pageNo,
+            @RequestParam(value = "pageSize",defaultValue = "5")Integer pageSize
+    ) {
+        List<UserSucessKillsDTO> successKilleds = seckillService.queryUserSeckResult(userPhone,pageNo,pageSize);
+        int totalNum = seckillService.queryUserSeckResultCount(userPhone);
+        return new SeckillPageData<List<UserSucessKillsDTO>>(pageNo,pageSize,totalNum,successKilleds);
+    }
+
 
 }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ylz.dao.ProcedureMapper">
+
+    <!--调用存储过程-->
+    <select id="excuteSeckillPro" statementType="CALLABLE">
+        CALL excuteSeckillPro(
+        #{ userPhone ,jdbcType = VARCHAR , mode= IN },
+        #{ seckillId , jdbcType = BIGINT , mode= IN },
+        #{ createTime , jdbcType = TIMESTAMP , mode= IN },
+        #{ result , jdbcType = BIGINT , mode= OUT }
+        )
+    </select>
+
+</mapper>

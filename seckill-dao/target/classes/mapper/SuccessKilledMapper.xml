@@ -7,6 +7,14 @@
     <result column="status" jdbcType="INTEGER" property="status" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
   </resultMap>
+
+  <resultMap id="userKillResultMap" type="UserSucessKillsDTO">
+    <id column="userName" jdbcType="VARCHAR" property="userName" />
+    <id column="skPhone" jdbcType="BIGINT" property="skPhone" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="skTime" jdbcType="TIMESTAMP" property="skTime" />
+  </resultMap>
+
   <sql id="Base_Column_List">
     seckill_id, user_phone, status, create_time
   </sql>
@@ -68,4 +76,20 @@
       and user_phone = #{userPhone,jdbcType=BIGINT}
   </update>
 
+
+  <select id="queryUserResultsByPage" resultMap="userKillResultMap">
+   SELECT s.`name` skName,user_phone userPhone,status,sk.create_time skTime
+    FROM success_killed sk,seckill s
+    WHERE	sk.seckill_id = s.seckill_id
+	AND user_phone = #{userPhone}
+	ORDER BY skTime DESC
+	LIMIT #{begin},#{offset}
+  </select>
+
+  <select id="queryUserResultsCount" resultType="int">
+    SELECT COUNT(1)
+    FROM success_killed sk,seckill s
+    WHERE	sk.seckill_id = s.seckill_id
+    AND user_phone = #{userPhone}
+  </select>
 </mapper>

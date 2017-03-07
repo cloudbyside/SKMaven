@@ -18,6 +18,7 @@
         <module>seckill-redis</module>
         <module>seckill-test</module>
         <module>seckill-web</module>
+        <module>seckill-parent</module>
     </modules>
 
     <properties>
@@ -50,82 +51,14 @@
         <tglib.version>1.1.2</tglib.version>
 
         <!--spring依赖和springMVC相关依赖-->
-        <spring.version>4.3.3.RELEASE</spring.version>
+        <spring.version>4.3.1.RELEASE</spring.version>
         <jackson.version>2.8.1</jackson.version>
 
         <!--缓存相关-->
         <redis.version>2.7.3</redis.version>
         <protostuff.version>1.0.8</protostuff.version>
-
     </properties>
 
-    <dependencies>
-        <!--#########################全部模块公共依赖试相关Jar包################################-->
-        <!--单元测试依赖-->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-        </dependency>
-        <!--spring测试依赖-->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-test</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-        <!--fastJson依赖-->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>${fastjson.version}</version>
-        </dependency>
-
-
-        <!--日志相关依赖-->
-        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>${sl4j.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>${logback.version}</version>
-        </dependency>
-
-
-        <!--Spring相关公共依赖-->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-core</artifactId>
-            <version>${spring.version}</version><!--核心依赖-->
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-beans</artifactId>
-            <version>${spring.version}</version><!--Bean组件-->
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>${spring.version}</version><!--静态文件加载相关-->
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-tx</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-        <!--否则会报Caused by: java.lang.ClassNotFoundException: org.springframework.dao.support.DaoSupport-->
-
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-jdbc</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-        <!--否则会报:Property 'dataSource' threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/jdbc/datasource/TransactionAwareDataSourceProxy-->
-    </dependencies>
 
     <build>
         <finalName>${project.artifactId}</finalName>

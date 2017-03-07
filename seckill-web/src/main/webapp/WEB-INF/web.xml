@@ -15,7 +15,8 @@
             <param-value>
                 classpath:spring/spring-web.xml,
                 classpath:spring/spring-service.xml,
-                classpath:spring/spring-dao.xml
+                classpath:spring/spring-dao.xml,
+                classpath:spring/spring-redis.xml
             </param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
@@ -27,4 +28,9 @@
     <!--2.配置POST请求编码过滤器，防止POST请求提交乱码-->
 
     <!--额外：配置过滤器，过滤页面-->
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/jsp/error/error404.jsp</location>
+    </error-page>
 </web-app>

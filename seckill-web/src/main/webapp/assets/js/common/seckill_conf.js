@@ -9,6 +9,9 @@
 var seckillConfig={
     /*存放ajax数据访问接口*/
     URL:{
+        userResult:function (pageNo,pageSize,userPhone) {
+            return "/seckill/user/results?userPhone="+userPhone+"&pageNo="+pageNo+"&pageSize="+pageSize;
+        },
         allTotal:function () {
           return "/seckill/query/totals";
         },
@@ -45,6 +48,12 @@ var seckillConfig={
     /*分页页码总数*/
     createNums:0,
     willBeginNums:0,
-    willEndNums:0
+    willEndNums:0,
+    /*css颜色样式*/
+    success:"success",
+    warn:"warn",
+    info:"info",
+    error:"error"
+
 
 }

@@ -4,16 +4,20 @@ import com.alibaba.fastjson.JSON;
 import com.ylz.base.SeckillResultData;
 import com.ylz.dto.ExecuteSeckillResult;
 import com.ylz.dto.ExposerResult;
+import com.ylz.dto.UserSucessKillsDTO;
 import com.ylz.entity.Seckill;
 import com.ylz.exception.NoSuchSeckillException;
 import com.ylz.exception.RepeatSeckillException;
 import com.ylz.exception.StoreEmptyException;
+import com.ylz.redis.RedisDao;
+import com.ylz.redis.proxy.RedisSeckillProxy;
 import com.ylz.service.SeckillService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import redis.clients.jedis.JedisPool;
 
 import java.util.List;
 
@@ -22,6 +26,7 @@ import java.util.List;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration({
+        "classpath:spring/spring-redis.xml",
         "classpath:spring/spring-dao.xml",
         "classpath:spring/spring-service.xml"
 })
@@ -35,7 +40,7 @@ public class SeckillServiceImlTest {
         try {
             ExposerResult exposerResult = seckillService.acquireSeckillURL(19);
             String md5 = exposerResult.getMd5();
-            ExecuteSeckillResult executeSeckillResult = seckillService.excuteSeckill(19, 15270998540L, md5);
+            ExecuteSeckillResult executeSeckillResult = seckillService.excuteSeckill(2, 15270998540L, md5);
             System.out.println(JSON.toJSONString(executeSeckillResult));
         } catch (NoSuchSeckillException e) {
             e.printStackTrace();
@@ -62,7 +67,7 @@ public class SeckillServiceImlTest {
 
     @Test
     public void acquireSeckillURL() {
-        ExposerResult exposerResult = seckillService.acquireSeckillURL(2);
+        ExposerResult exposerResult = seckillService.acquireSeckillURL(19);
         System.out.println(JSON.toJSONString(exposerResult));
     }
 
@@ -78,5 +83,48 @@ public class SeckillServiceImlTest {
         System.out.println(seckillService.selectAllCount());
     }
 
+
+    @Test
+    public void testJunit1(){
+        try {
+            ExecuteSeckillResult executeSeckillResult = seckillService.excuteSeckillByPro(19, 15270998540L, "605ce498c0f1c865df1425d8f05d2667");
+            SeckillResultData<ExecuteSeckillResult> seckillResultData = new SeckillResultData<ExecuteSeckillResult>(true, executeSeckillResult);
+            System.out.println(JSON.toJSONString(seckillResultData));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
+    @Autowired(required = false)
+    private RedisDao redisDao;
+
+    @Test
+    public void test4() {
+        RedisSeckillProxy daoProxy1 = new RedisSeckillProxy(redisDao);
+//        Seckill seckill = new Seckill();
+//        seckill.setSeckillId(101);
+//        seckill.setName("卡卡罗特");
+//        System.out.println(daoProxy1.saveObject(seckill));
+        System.out.println(JSON.toJSONString(daoProxy1.getSeckill(101)));
+        System.out.println(JSON.toJSONString(daoProxy1.getSeckill(2)));
+        System.out.println(JSON.toJSONString(daoProxy1.getSeckill(19)));
+    }
+
+
+    @Autowired
+    private JedisPool jedisPool;
+
+    @Test
+    public void test5(){
+        System.out.println(jedisPool);
+    }
+
+    @Test
+    public void test6(){
+        List<UserSucessKillsDTO> userSucessKillsDTOS = seckillService.queryUserSeckResult(15270998540L, 1, 5);
+        System.out.println(JSON.toJSONString(userSucessKillsDTOS));
+    }
 
 }

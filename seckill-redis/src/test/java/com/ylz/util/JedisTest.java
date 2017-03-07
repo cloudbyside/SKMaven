@@ -1,9 +1,8 @@
 package com.ylz.util;
 
 import com.alibaba.fastjson.JSON;
-import com.ylz.entity.Seckill;
 import com.ylz.redis.RedisDao;
-import com.ylz.redis.proxy.RedisDaoProxy;
+import com.ylz.redis.proxy.RedisSeckillProxy;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +17,8 @@ import redis.clients.jedis.JedisPool;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration({
-        "classpath:spring/spring-redis.xml"
+        "classpath:spring/spring-redis.xml",
+        "classpath:spring/spring-dao.xml"
 })
 public class JedisTest {
 
@@ -55,12 +55,13 @@ public class JedisTest {
 
     @Test
     public void test4() {
-        RedisDaoProxy daoProxy1 = new RedisDaoProxy(redisDao);
-        Seckill seckill = new Seckill();
-        seckill.setSeckillId(101);
-        seckill.setName("卡卡罗特");
-        System.out.println(daoProxy1.saveObject(seckill));
+        RedisSeckillProxy daoProxy1 = new RedisSeckillProxy(redisDao);
+//        Seckill seckill = new Seckill();
+//        seckill.setSeckillId(101);
+//        seckill.setName("卡卡罗特");
+//        System.out.println(daoProxy1.saveObject(seckill));
         System.out.println(JSON.toJSONString(daoProxy1.getSeckill(101)));
+        System.out.println(JSON.toJSONString(daoProxy1.getSeckill(1010)));
     }
 
 

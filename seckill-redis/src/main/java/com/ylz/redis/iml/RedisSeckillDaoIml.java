@@ -38,7 +38,11 @@ public class RedisSeckillDaoIml implements RedisDao {
     public Seckill getSeckill(int id) {
         byte[] keyBytes = ("seckill:"+id).getBytes();
         this.jedis = jedisPool.getResource();
-        Seckill seckill = (Seckill) GoogleSerializeUtil.unserialize(jedis.get(keyBytes),Seckill.class);
+        byte[] bytes = jedis.get(keyBytes);
+        if(bytes==null){
+            return null;
+        }
+        Seckill seckill = (Seckill) GoogleSerializeUtil.unserialize(bytes,Seckill.class);
         return seckill;
     }
 
