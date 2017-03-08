@@ -4,148 +4,9 @@
     <bookmark url="file://$PROJECT_DIR$/seckill-web/src/main/webapp/assets/js/modal/seckill/seckill_list_function.js" line="28" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6f92bbb-e589-4b87-a700-5170dc85e250" name="Default" comment="已完成：完成了类型分页，升序降序功能，前台页面基本完善&#10;待完成：1.编写存储过程，优化秒杀动作 2.使用中间件Redis做缓存减轻Mysql数据库压力&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seckill-web/src/main/webapp/imges/0x1f4a5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seckill-web/src/main/webapp/imges/my_chart.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seckill-dao/src/main/java/com/ylz/dao/ProcedureMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seckill-dao/src/main/resources/config.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seckill-dao/src/main/resources/mapper/ProceduerMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seckill-dao/src/main/sql/seckill_pro.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seckill-dto/src/main/java/com/ylz/dto/UserSucessKillsDTO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seckill-enum/src/main/java/com/ylz/enums/AttributeEnums.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seckill-parent/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seckill-parent/seckill-parent.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seckill-service/src/test/java/com/ylz/service/iml/TestRedis.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seckill-test/src/main/java/com/ylz/test/TestB.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seckill-test/src/test/java/TestDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seckill-test/src/test/java/TestRedis.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seckill-web/src/main/webapp/WEB-INF/jsp/error/error404.jsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/seckill-dao/src/main/resources/db.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/seckill-dao/target/classes/db.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/seckill-dto/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/seckill-dto/target/seckill-dto.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/seckill-redis/target/classes/com/ylz/redis/proxy/RedisDaoProxy.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/seckill-web/target/seckill-web/WEB-INF/lib/spring-aop-4.3.3.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/seckill-web/target/seckill-web/WEB-INF/lib/spring-beans-4.3.3.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/seckill-web/target/seckill-web/WEB-INF/lib/spring-context-4.3.3.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/seckill-web/target/seckill-web/WEB-INF/lib/spring-core-4.3.3.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/seckill-web/target/seckill-web/WEB-INF/lib/spring-expression-4.3.3.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/seckill-web/target/seckill-web/WEB-INF/lib/spring-jdbc-4.3.3.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/seckill-web/target/seckill-web/WEB-INF/lib/spring-test-4.3.3.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/seckill-web/target/seckill-web/WEB-INF/lib/spring-tx-4.3.3.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/seckill-web/target/seckill-web/WEB-INF/lib/spring-web-4.3.3.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/seckill-web/target/seckill-web/WEB-INF/lib/spring-webmvc-4.3.3.RELEASE.jar" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-dao/target/classes/com/ylz/dao/SuccessKilledMapper.class" afterPath="$PROJECT_DIR$/seckill-dao/target/classes/com/ylz/dao/SuccessKilledMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-dao/target/seckill-dao-sources.jar" afterPath="$PROJECT_DIR$/seckill-dao/target/seckill-dao-sources.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-dao/target/seckill-dao.jar" afterPath="$PROJECT_DIR$/seckill-dao/target/seckill-dao.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-dao/target/test-classes/com/ylz/dao/TestSeckillDao.class" afterPath="$PROJECT_DIR$/seckill-dao/target/test-classes/com/ylz/dao/TestSeckillDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-dto/target/seckill-dto-sources.jar" afterPath="$PROJECT_DIR$/seckill-dto/target/seckill-dto-sources.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-entity/target/seckill-entity-sources.jar" afterPath="$PROJECT_DIR$/seckill-entity/target/seckill-entity-sources.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-entity/target/seckill-entity.jar" afterPath="$PROJECT_DIR$/seckill-entity/target/seckill-entity.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-enum/target/classes/com/ylz/enums/SeckillEnums.class" afterPath="$PROJECT_DIR$/seckill-enum/target/classes/com/ylz/enums/SeckillEnums.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-enum/target/seckill-enum-sources.jar" afterPath="$PROJECT_DIR$/seckill-enum/target/seckill-enum-sources.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-enum/target/seckill-enum.jar" afterPath="$PROJECT_DIR$/seckill-enum/target/seckill-enum.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-exception/target/seckill-exception-sources.jar" afterPath="$PROJECT_DIR$/seckill-exception/target/seckill-exception-sources.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-exception/target/seckill-exception.jar" afterPath="$PROJECT_DIR$/seckill-exception/target/seckill-exception.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-redis/target/classes/com/ylz/redis/iml/RedisSeckillDaoIml.class" afterPath="$PROJECT_DIR$/seckill-redis/target/classes/com/ylz/redis/iml/RedisSeckillDaoIml.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-redis/target/seckill-redis-sources.jar" afterPath="$PROJECT_DIR$/seckill-redis/target/seckill-redis-sources.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-redis/target/seckill-redis.jar" afterPath="$PROJECT_DIR$/seckill-redis/target/seckill-redis.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-redis/target/test-classes/com/ylz/util/JedisTest.class" afterPath="$PROJECT_DIR$/seckill-redis/target/test-classes/com/ylz/util/JedisTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-service/target/classes/com/ylz/service/SeckillService.class" afterPath="$PROJECT_DIR$/seckill-service/target/classes/com/ylz/service/SeckillService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-service/target/classes/com/ylz/service/iml/SeckillServiceIml.class" afterPath="$PROJECT_DIR$/seckill-service/target/classes/com/ylz/service/iml/SeckillServiceIml.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-service/target/seckill-service-sources.jar" afterPath="$PROJECT_DIR$/seckill-service/target/seckill-service-sources.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-service/target/seckill-service.jar" afterPath="$PROJECT_DIR$/seckill-service/target/seckill-service.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-service/target/test-classes/com/ylz/service/iml/SeckillServiceImlTest.class" afterPath="$PROJECT_DIR$/seckill-service/target/test-classes/com/ylz/service/iml/SeckillServiceImlTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-test/target/seckill-test-sources.jar" afterPath="$PROJECT_DIR$/seckill-test/target/seckill-test-sources.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-test/target/seckill-test.jar" afterPath="$PROJECT_DIR$/seckill-test/target/seckill-test.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-web/target/classes/com/ylz/web/SeckillControl.class" afterPath="$PROJECT_DIR$/seckill-web/target/classes/com/ylz/web/SeckillControl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-web/target/seckill-web-sources.jar" afterPath="$PROJECT_DIR$/seckill-web/target/seckill-web-sources.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-web/target/seckill-web.war" afterPath="$PROJECT_DIR$/seckill-web/target/seckill-web.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-web/target/seckill-web/WEB-INF/classes/com/ylz/web/SeckillControl.class" afterPath="$PROJECT_DIR$/seckill-web/target/seckill-web/WEB-INF/classes/com/ylz/web/SeckillControl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-web/target/seckill-web/WEB-INF/lib/seckill-dao-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/seckill-web/target/seckill-web/WEB-INF/lib/seckill-dao-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-web/target/seckill-web/WEB-INF/lib/seckill-dto-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/seckill-web/target/seckill-web/WEB-INF/lib/seckill-dto-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-web/target/seckill-web/WEB-INF/lib/seckill-entity-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/seckill-web/target/seckill-web/WEB-INF/lib/seckill-entity-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-web/target/seckill-web/WEB-INF/lib/seckill-enum-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/seckill-web/target/seckill-web/WEB-INF/lib/seckill-enum-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-web/target/seckill-web/WEB-INF/lib/seckill-exception-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/seckill-web/target/seckill-web/WEB-INF/lib/seckill-exception-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-web/target/seckill-web/WEB-INF/lib/seckill-redis-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/seckill-web/target/seckill-web/WEB-INF/lib/seckill-redis-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-web/target/seckill-web/WEB-INF/lib/seckill-service-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/seckill-web/target/seckill-web/WEB-INF/lib/seckill-service-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/seckill_web_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/seckill_web_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+    <list default="true" id="c6f92bbb-e589-4b87-a700-5170dc85e250" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SKMaven.iml" afterPath="$PROJECT_DIR$/SKMaven.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-dao/pom.xml" afterPath="$PROJECT_DIR$/seckill-dao/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-dao/seckill-dao.iml" afterPath="$PROJECT_DIR$/seckill-dao/seckill-dao.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-dao/src/main/java/com/ylz/dao/SuccessKilledMapper.java" afterPath="$PROJECT_DIR$/seckill-dao/src/main/java/com/ylz/dao/SuccessKilledMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-dao/src/main/resources/mapper/SeckillMapper.xml" afterPath="$PROJECT_DIR$/seckill-dao/src/main/resources/mapper/SeckillMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-dao/src/main/resources/mapper/SuccessKilledMapper.xml" afterPath="$PROJECT_DIR$/seckill-dao/src/main/resources/mapper/SuccessKilledMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-dao/src/main/resources/mybatis-config.xml" afterPath="$PROJECT_DIR$/seckill-dao/src/main/resources/mybatis-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-dao/src/main/resources/spring/spring-dao.xml" afterPath="$PROJECT_DIR$/seckill-dao/src/main/resources/spring/spring-dao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-dao/src/test/java/com/ylz/dao/TestSeckillDao.java" afterPath="$PROJECT_DIR$/seckill-dao/src/test/java/com/ylz/dao/TestSeckillDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-dao/target/classes/mapper/SeckillMapper.xml" afterPath="$PROJECT_DIR$/seckill-dao/target/classes/mapper/SeckillMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-dao/target/classes/mapper/SuccessKilledMapper.xml" afterPath="$PROJECT_DIR$/seckill-dao/target/classes/mapper/SuccessKilledMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-dao/target/classes/mybatis-config.xml" afterPath="$PROJECT_DIR$/seckill-dao/target/classes/mybatis-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-dao/target/classes/spring/spring-dao.xml" afterPath="$PROJECT_DIR$/seckill-dao/target/classes/spring/spring-dao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/seckill-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-dto/pom.xml" afterPath="$PROJECT_DIR$/seckill-dto/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-dto/seckill-dto.iml" afterPath="$PROJECT_DIR$/seckill-dto/seckill-dto.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-dto/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/seckill-dto/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-dto/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/seckill-dto/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-entity/pom.xml" afterPath="$PROJECT_DIR$/seckill-entity/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-entity/seckill-entity.iml" afterPath="$PROJECT_DIR$/seckill-entity/seckill-entity.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-entity/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/seckill-entity/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-entity/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/seckill-entity/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-enum/pom.xml" afterPath="$PROJECT_DIR$/seckill-enum/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-enum/seckill-enum.iml" afterPath="$PROJECT_DIR$/seckill-enum/seckill-enum.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-enum/src/main/java/com/ylz/enums/QueryTypeEnum.java" afterPath="$PROJECT_DIR$/seckill-enum/src/main/java/com/ylz/enums/QueryTypeEnum.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-enum/src/main/java/com/ylz/enums/SeckillEnums.java" afterPath="$PROJECT_DIR$/seckill-enum/src/main/java/com/ylz/enums/SeckillEnums.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-enum/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/seckill-enum/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-exception/pom.xml" afterPath="$PROJECT_DIR$/seckill-exception/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-exception/seckill-exception.iml" afterPath="$PROJECT_DIR$/seckill-exception/seckill-exception.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-redis/pom.xml" afterPath="$PROJECT_DIR$/seckill-redis/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-redis/seckill-redis.iml" afterPath="$PROJECT_DIR$/seckill-redis/seckill-redis.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-redis/src/main/java/com/ylz/redis/iml/RedisSeckillDaoIml.java" afterPath="$PROJECT_DIR$/seckill-redis/src/main/java/com/ylz/redis/iml/RedisSeckillDaoIml.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-redis/src/main/resources/spring/spring-redis.xml" afterPath="$PROJECT_DIR$/seckill-redis/src/main/resources/spring/spring-redis.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-redis/src/test/java/com/ylz/util/JedisTest.java" afterPath="$PROJECT_DIR$/seckill-redis/src/test/java/com/ylz/util/JedisTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-redis/target/classes/spring/spring-redis.xml" afterPath="$PROJECT_DIR$/seckill-redis/target/classes/spring/spring-redis.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-redis/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/seckill-redis/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-redis/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/seckill-redis/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-service/pom.xml" afterPath="$PROJECT_DIR$/seckill-service/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-service/seckill-service.iml" afterPath="$PROJECT_DIR$/seckill-service/seckill-service.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-service/src/main/java/com/ylz/service/SeckillService.java" afterPath="$PROJECT_DIR$/seckill-service/src/main/java/com/ylz/service/SeckillService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-service/src/main/java/com/ylz/service/iml/SeckillServiceIml.java" afterPath="$PROJECT_DIR$/seckill-service/src/main/java/com/ylz/service/iml/SeckillServiceIml.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-service/src/test/java/com/ylz/service/iml/SeckillServiceImlTest.java" afterPath="$PROJECT_DIR$/seckill-service/src/test/java/com/ylz/service/iml/SeckillServiceImlTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="$PROJECT_DIR$/seckill-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-test/pom.xml" afterPath="$PROJECT_DIR$/seckill-test/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-test/seckill-test.iml" afterPath="$PROJECT_DIR$/seckill-test/seckill-test.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-test/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="$PROJECT_DIR$/seckill-test/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-web/pom.xml" afterPath="$PROJECT_DIR$/seckill-web/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-web/seckill-web.iml" afterPath="$PROJECT_DIR$/seckill-web/seckill-web.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-web/src/main/java/com/ylz/web/SeckillControl.java" afterPath="$PROJECT_DIR$/seckill-web/src/main/java/com/ylz/web/SeckillControl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-web/src/main/resources/spring/spring-web.xml" afterPath="$PROJECT_DIR$/seckill-web/src/main/resources/spring/spring-web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-web/src/main/webapp/WEB-INF/jsp/list.jsp" afterPath="$PROJECT_DIR$/seckill-web/src/main/webapp/WEB-INF/jsp/list.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-web/src/main/webapp/WEB-INF/jsp/seckill_list_detail.jsp" afterPath="$PROJECT_DIR$/seckill-web/src/main/webapp/WEB-INF/jsp/seckill_list_detail.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-web/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/seckill-web/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-web/src/main/webapp/assets/js/common/seckill_conf.js" afterPath="$PROJECT_DIR$/seckill-web/src/main/webapp/assets/js/common/seckill_conf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-web/src/main/webapp/assets/js/modal/seckill/seckill.js" afterPath="$PROJECT_DIR$/seckill-web/src/main/webapp/assets/js/modal/seckill/seckill.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-web/src/main/webapp/assets/js/modal/seckill/seckill_list_function.js" afterPath="$PROJECT_DIR$/seckill-web/src/main/webapp/assets/js/modal/seckill/seckill_list_function.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-web/target/classes/spring/spring-web.xml" afterPath="$PROJECT_DIR$/seckill-web/target/classes/spring/spring-web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-web/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/seckill-web/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-web/target/seckill-web/WEB-INF/classes/spring/spring-web.xml" afterPath="$PROJECT_DIR$/seckill-web/target/seckill-web/WEB-INF/classes/spring/spring-web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-web/target/seckill-web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/seckill-web/target/seckill-web/WEB-INF/web.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_3_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_1_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_3_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_1_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_3_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_1_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_3_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_3_1_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_3_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_1_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_3_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_1_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_3_3_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_1_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_3_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_1_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_3_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_1_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_3_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_1_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/seckill-redis/src/main/java/com/ylz/redis/proxy/RedisDaoProxy.java" afterPath="$PROJECT_DIR$/seckill-redis/src/main/java/com/ylz/redis/proxy/RedisSeckillProxy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seckill-test/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/seckill-test/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
     </list>
     <ignored path="SKMaven.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -197,32 +58,7 @@
     <favorites_list name="SKMaven" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SeckillMapper.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/seckill-dao/src/main/resources/mapper/SeckillMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="27" column="11" lean-forward="false" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="37" />
-              <folding>
-                <marker date="1488888606905" expanded="true" signature="936:1064" ph="select from seckill" />
-                <marker date="1488888606905" expanded="true" signature="1179:2923" ph="select from seckill" />
-                <marker date="1488888606905" expanded="true" signature="1296:1317" ph="/*1.1默认按照创建时... " />
-                <marker date="1488888606905" expanded="true" signature="1414:1431" ph="/*1.2默认按照创建时... " />
-                <marker date="1488888606905" expanded="true" signature="1528:1547" ph="/*2.1按照即将开始时... " />
-                <marker date="1488888606905" expanded="true" signature="1743:1758" ph="/*2.2按照即将开始时... " />
-                <marker date="1488888606905" expanded="true" signature="1954:1973" ph="/*3.1按照即将结束时... " />
-                <marker date="1488888606905" expanded="true" signature="2166:2181" ph="/*3.2按照即将结束时... " />
-                <marker date="1488888606905" expanded="true" signature="2373:2388" ph="/*4.1活动正在进行排... " />
-                <marker date="1488888606905" expanded="true" signature="2655:2670" ph="/*4.1活动正在进行排... " />
-                <marker date="1488888606905" expanded="true" signature="3604:3676" ph="delete from " />
-                <marker date="1488888606905" expanded="true" signature="5189:5866" ph="update secki... " />
-                <marker date="1488888606905" expanded="true" signature="5951:6075" ph="update secki... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -1401,7 +1237,7 @@
       <workItem from="1488527606198" duration="79406000" />
       <workItem from="1488872767082" duration="150000" />
       <workItem from="1488873056994" duration="181000" />
-      <workItem from="1488873273866" duration="12856000" />
+      <workItem from="1488873273866" duration="14579000" />
     </task>
     <task id="LOCAL-00001" summary="版本中途提交测试">
       <created>1488161622172</created>
@@ -1431,7 +1267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1488767382626</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="已完成：完成了项目的所有功能&#10;待完成：再运行过程中，检测bug继续完善&#10;">
+      <created>1488897927927</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1488897927927</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1467,7 +1310,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="326112000" />
+    <option name="totallyTimeSpent" value="327835000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1480,13 +1323,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47954175" sideWeight="0.5060698" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3590164" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18305598" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18305598" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1505,7 +1348,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10327869" sideWeight="0.4939302" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29180327" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2632375" sideWeight="0.6309795" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2624811" sideWeight="0.6309795" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26928896" sideWeight="0.35805628" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25340393" sideWeight="0.3690205" order="5" side_tool="true" content_ui="tabs" />
@@ -1519,44 +1362,6 @@
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30441898" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6213115" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47954175" sideWeight="0.5060698" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3590164" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18305598" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29198185" sideWeight="0.5" order="10" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18986385" sideWeight="0.492569" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962063" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36065573" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2852459" sideWeight="0.49544764" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20458265" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29016393" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10327869" sideWeight="0.4939302" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2336874" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29180327" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30441898" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2632375" sideWeight="0.6309795" order="6" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26928896" sideWeight="0.35805628" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6213115" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25340393" sideWeight="0.3690205" order="5" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -1577,7 +1382,8 @@
     <MESSAGE value="写完Redis工具类，并且使用protostuff做序列化压缩数据" />
     <MESSAGE value="测试提交" />
     <MESSAGE value="已完成：完成了类型分页，升序降序功能，前台页面基本完善&#10;待完成：1.编写存储过程，优化秒杀动作 2.使用中间件Redis做缓存减轻Mysql数据库压力&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="已完成：完成了类型分页，升序降序功能，前台页面基本完善&#10;待完成：1.编写存储过程，优化秒杀动作 2.使用中间件Redis做缓存减轻Mysql数据库压力&#10;" />
+    <MESSAGE value="已完成：完成了项目的所有功能&#10;待完成：再运行过程中，检测bug继续完善&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="已完成：完成了项目的所有功能&#10;待完成：再运行过程中，检测bug继续完善&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2062,8 +1868,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/seckill-dao/src/main/resources/mapper/SeckillMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="27" column="11" lean-forward="false" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="37" />
+        <state relative-caret-position="179">
+          <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
           <folding>
             <marker date="1488888606905" expanded="true" signature="936:1064" ph="select from seckill" />
             <marker date="1488888606905" expanded="true" signature="1179:2923" ph="select from seckill" />
